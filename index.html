@@ -9,5 +9,18 @@
         <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
+    <!-- 버튼 추가 -->
+    <button onclick="moveToOtherPage()">다른 페이지로 이동</button>
+
+    <script>
+        function moveToOtherPage() {
+            // 이동하고자 하는 다른 페이지의 URL 입력
+            var otherPageURL = 'https://example.com/otherpage.html';
+            
+            // 페이지 이동
+            window.location.href = otherPageURL;
+        }
+    </script>
 </body>
 </html>
