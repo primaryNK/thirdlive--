@@ -22,11 +22,31 @@ body {
     outline: none;
 }
 
+.header button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+}
+
 /* Menu Slider */
 .menu-slider {
     background-color: #ddd;
     height: 50px;
-    /* 메뉴 슬라이더 스타일링 */
+    display: none; /* 초기에는 숨김 */
+}
+
+.menu-slider ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-slider ul li {
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 /* Thumbnails */
@@ -35,6 +55,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 20px;
+    max-height: 70vh;
+    overflow-y: scroll; /* 스크롤 기능 추가 */
 }
 
 .thumbnail {
@@ -44,19 +66,10 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     width: calc(33.33% - 20px);
-    /* 각 썸네일 너비 */
 }
 
 .longer-thumbnail {
     height: 250px;
-    /* 조금 더 긴 썸네일 높이 */
-}
-
-/* Scrollbar */
-.thumbnails {
-    overflow-y: scroll;
-    max-height: 70vh;
-    /* 스크롤 기능 추가 및 높이 설정 */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
