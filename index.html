@@ -1,29 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>동적 웹페이지</title>
-    <style>
-        /* CSS 스타일 */
-        .dynamic-content {
-            font-size: 24px;
-            color: #333;
-        }
-    </style>
+    <title>동영상 플랫폼</title>
 </head>
 <body>
-    <h1>동적 웹페이지</h1>
-    <p class="dynamic-content" id="dynamicText">이 부분은 JavaScript에 의해 변경됩니다!</p>
-
-    <!-- JavaScript로 동적으로 내용을 변경할 버튼 -->
-    <button onclick="changeText()">텍스트 변경</button>
-
-    <script>
-        // JavaScript 코드
-        function changeText() {
-            var newText = "새로운 내용으로 변경되었습니다!";
-            document.getElementById("dynamicText").innerText = newText;
-        }
-    </script>
+    <h1>동영상 스트리밍 서비스</h1>
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>
