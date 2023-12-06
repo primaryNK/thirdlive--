@@ -14,12 +14,12 @@
     <button onclick="moveToOtherPage()">다른 페이지로 이동</button>
 
     <script>
-        function moveToOtherPage() {
-            // 이동하고자 하는 다른 페이지의 URL 입력
-            var otherPageURL = 'https://github.com/username/repositoryname/test1.html';
+        function runTest1() {
+            // 레포지토리 안에 있는 test1.html 파일의 경로를 입력합니다.
+            var test1Path = 'test1.html';
             
-            // 페이지 이동
-            window.location.href = otherPageURL;
+            // 새로운 창에서 test1.html을 엽니다.
+            window.open(test1Path, '_blank');
         }
     </script>
 </body>
