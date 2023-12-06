@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>동영상 플랫폼</title>
+    <title>유튜브 형식의 썸네일</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>동영상 스트리밍 서비스</h1>
-    <video controls>
-        <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- 버튼 추가 -->
-    <button onclick="runTest1()">다른 페이지로 이동</button>
-
-    <script>
-        function runTest1() {
-            // 레포지토리 안에 있는 test1.html 파일의 경로를 입력합니다.
-            var test1Path = 'test1.html';
-            
-            // 새로운 창에서 test1.html을 엽니다.
-            window.location.href = test1Path;
-        }
-    </script>
+    <h1>유튜브 형식의 썸네일</h1>
+    <div class="thumbnails">
+        <div class="thumbnail">
+            <img src="thumbnail1.jpg" alt="Thumbnail 1">
+            <h2>영상 제목 1</h2>
+        </div>
+        <div class="thumbnail">
+            <img src="thumbnail2.jpg" alt="Thumbnail 2">
+            <h2>영상 제목 2</h2>
+        </div>
+        <div class="thumbnail">
+            <img src="thumbnail3.jpg" alt="Thumbnail 3">
+            <h2>영상 제목 3</h2>
+        </div>
+        <!-- 필요한 만큼 썸네일 추가 -->
+    </div>
 </body>
 </html>
