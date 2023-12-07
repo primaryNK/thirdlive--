@@ -82,7 +82,7 @@ menuButton.addEventListener('click', function() {
     menuButton2.disabled = true; // 버튼 비활성화
     if (menuButton2.classList.contains('show')) {
       menuButton2.disabled = false; // 버튼 다시 활성화
-    }, 500); // 애니메이션 지속 시간과 동일한 시간(0.5초) 이후에 버튼 활성화
+    }; 
   }
 });
 
@@ -94,7 +94,7 @@ menuButton2.addEventListener('click', function() {
     menuButton.disabled = true; // 버튼 비활성화
     if (menuButton.classList.contains('show')) {
       menuButton.disabled = false; // 버튼 다시 활성화
-    }, 500); // 애니메이션 지속 시간과 동일한 시간(0.5초) 이후에 버튼 활성화
+    };   
   }
 });
 
