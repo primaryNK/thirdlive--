@@ -71,3 +71,6 @@ function arrangeThumbnails() {
     thumbnailsContainer.appendChild(uploaderDiv);
   });
 }
+document.querySelector('.upload-button').addEventListener('click', function() {
+  window.location.href = 'upload.html'; // 업로드 페이지로 이동
+});
