@@ -32,6 +32,11 @@ header {
   font-size: 50px;
   color: black;
   padding: 5px 10px;
+  display: block;
+}
+
+#menuButton2.hidden{
+  display: None;
 }
 
 #menuButton{
@@ -40,6 +45,11 @@ header {
   font-size: 50px;
   color: white;
   padding: 5px 10px;
+  display: block;
+}
+
+#menuButton.hidden{
+  display: None;
 }
 
 #menu {
