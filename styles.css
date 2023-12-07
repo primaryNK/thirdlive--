@@ -26,6 +26,21 @@ header {
   border-radius: 20px; 
 }
 
+#menu {
+  background-color: #ccc;
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s; /* 슬라이드 애니메이션 지속 시간 */
+}
+
+#menu.open {
+  width: 50%; /* 슬라이드되는 메뉴의 너비 조정 */
+}
+
 /* Footer */
 footer {
   position: fixed;
