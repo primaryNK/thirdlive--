@@ -40,12 +40,12 @@ main {
 }
 
 .thumbnail {
-  margin: 10px;
+  margin: 20px; /* 위아래 폭 넓힘 */
   padding: 20px;
   border: 2px dashed #FF6EFF;
   border-radius: 10px;
-  width: calc(50% - 20px); /* 동적 썸네일 크기 설정 */
-  background-color: #FF6EFF; /* 연분홍 배경 추가 */
+  width: calc(50% - 40px); /* 위아래 폭 넓힘 */
+  background-color: #EAEAEA; /* 연회색 배경 추가 */
 }
 
 .thumbnail input[type="text"] {
@@ -64,17 +64,17 @@ footer {
 }
 
 #uploadButton {
-  width: 40px;
-  height: 40px;
+  width: 60px; /* 크기 키우기 */
+  height: 60px; /* 크기 키우기 */
   border-radius: 50%;
-  background-color: #333;
-  color: white;
-  font-size: 24px;
-  border: none;
+  background-color: white; /* 하얀색 배경 추가 */
+  color: #007bff; /* 파랑 글자 추가 */
+  font-size: 28px; /* 폰트 사이즈 키우기 */
+  border: 2px solid #007bff; /* 테두리 추가 */
   cursor: pointer;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #uploadButton:hover {
-  background-color: #555;
+  background-color: #f0f0f0; /* 호버 배경색 추가 */
 }
