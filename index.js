@@ -1,5 +1,3 @@
-// index.js
-
 function arrangeThumbnails() {
   const thumbnailsContainer = document.getElementById('thumbnailsContainer');
   thumbnailsContainer.innerHTML = ''; // 기존 콘텐츠 초기화
@@ -75,7 +73,5 @@ function arrangeThumbnails() {
 arrangeThumbnails(); // 썸네일 배치 함수 호출
 
 document.querySelector('.upload-button').addEventListener('click', function() {
-    window.location.href = 'upload.html'; // 업로드 페이지로 이동
-  });
-
-
+  window.location.href = 'upload.html'; // 업로드 페이지로 이동
+});
