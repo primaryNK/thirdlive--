@@ -1,13 +1,16 @@
 /* styles.css */
 
+/* styles.css */
+
 /* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #f6d6e1; /* 연분홍색 */
+  background: linear-gradient(to right, #f6d6e1, #fcc6ff); /* 그라데이션 적용 */
 }
+
 
 .logo h1 {
   margin: 0;
@@ -28,7 +31,7 @@ footer {
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #f6d6e1; /* 연분홍색 */
+  background-color: #000; /* 검은색 */
 }
 
 #uploadButton {
