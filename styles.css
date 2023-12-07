@@ -1,94 +1,40 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+/* Reset some default styles */
+body, h1, h2, p, input, button {
+  margin: 0;
+  padding: 0;
 }
 
-/* Header */
-.header {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
+/* Basic styling for the layout */
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
 }
 
-.header input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    margin-right: 20px;
-    outline: none;
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-.header button {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: #666;
-    color: white;
+.video {
+  width: 500px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Menu Bar */
-.menu-bar {
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: #666;
-    color: white;
+iframe {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
 }
-
-/* Menu Slider */
-.menu-slider {
-    background-color: #ddd;
-    height: 50px;
-    display: none; /* 초기에는 숨김 */
-}
-
-.menu-slider ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.menu-slider ul li {
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Thumbnails */
-.thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px;
-    max-height: 70vh;
-    overflow-y: scroll; /* 스크롤 기능 추가 */
-}
-
-.thumbnail {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    width: calc(33.33% - 20px);
-}
-
-.longer-thumbnail {
-    height: 250px;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.thumbnails::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.thumbnails {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
 }
