@@ -29,7 +29,7 @@ function arrangeThumbnails() {
 
     // 실제 썸네일 이미지는 여기에 추가하거나 생성할 수 있습니다.
     const thumbnailImage = document.createElement('img');
-    thumbnailImage.src = 'example.jpg'; // 썸네일 이미지 경로
+    thumbnailImage.src = 'img (4).jpg'; // 썸네일 이미지 경로
 
     // 썸네일 이미지 추가
     thumbnailDiv.appendChild(thumbnailImage);
