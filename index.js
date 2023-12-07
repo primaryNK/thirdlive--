@@ -78,3 +78,9 @@ uploadButton.addEventListener('click', function() {
 
 arrangeThumbnails(); // 썸네일 배치 함수 호출
 
+const menuButton = document.getElementById('menuButton');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', function() {
+  menu.classList.toggle('open');
+});
