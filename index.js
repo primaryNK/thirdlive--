@@ -73,7 +73,7 @@ function arrangeThumbnails() {
 const menuButton = document.getElementById('menuButton');
 const menu = document.getElementById('menu');
 
-menuButton.addEventListener('click', function() {
+menuButton2.addEventListener('click', function() {
   menu.classList.toggle('open');
 });
 
