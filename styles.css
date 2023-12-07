@@ -6,7 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(45deg, #FF6EFF, #FFFF99);
-  padding: 20px;
+  padding: 15px;
 }
 
 .logo h1 {
@@ -35,14 +35,14 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #4285F4;
+  width: 200px;
+  height: 200px;
+  background-color: #ff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: blue;
   font-size: 24px;
   cursor: pointer;
 }
