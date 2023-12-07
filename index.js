@@ -77,6 +77,13 @@ menuButton.addEventListener('click', function() {
   menu.classList.toggle('open');
 });
 
+const menuButton2 = document.getElementById('menuButton2');
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', function() {
+  menu.classList.toggle('close');
+});
+
 const uploadButton = document.getElementById('uploadButton');
 
 uploadButton.addEventListener('click', function() {
