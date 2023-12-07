@@ -1,18 +1,12 @@
 /* styles.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: white; /* 배경색 추가 */
-}
 
+/* Header */
 header {
-  background: linear-gradient(45deg, #FF6EFF, #FFFF99);
-  padding: 20px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: #f6d6e1; /* 연분홍색 */
 }
 
 .logo h1 {
@@ -20,61 +14,59 @@ header {
 }
 
 .login-button a {
-  background-color: #333;
-  color: white;
   text-decoration: none;
-  padding: 8px 12px;
+  color: #000;
+  border: 1px solid #000;
+  padding: 5px 10px;
   border-radius: 5px;
 }
 
-.login-button a:hover {
-  background-color: #555;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-}
-
-.thumbnail {
-  margin: 20px; /* 위아래 폭 넓힘 */
-  padding: 20px;
-  border: 2px dashed #FF6EFF;
-  border-radius: 10px;
-  width: calc(50% - 40px); /* 위아래 폭 넓힘 */
-  background-color: #EAEAEA; /* 연회색 배경 추가 */
-}
-
-.thumbnail input[type="text"] {
-  width: calc(100% - 40px);
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #FFFF99; /* 노랑 배경 추가 */
-}
-
+/* Footer */
 footer {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #f6d6e1; /* 연분홍색 */
 }
 
 #uploadButton {
-  width: 60px; /* 크기 키우기 */
-  height: 60px; /* 크기 키우기 */
-  border-radius: 50%;
-  background-color: white; /* 하얀색 배경 추가 */
-  color: #007bff; /* 파랑 글자 추가 */
-  font-size: 28px; /* 폰트 사이즈 키우기 */
-  border: 2px solid #007bff; /* 테두리 추가 */
+  background-color: #fff; /* 하얀색 */
+  color: #0000ff; /* 파랑 */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#uploadButton:hover {
-  background-color: #f0f0f0; /* 호버 배경색 추가 */
+/* Thumbnail Container */
+#thumbnailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.thumbnail {
+  background-color: #ccc; /* 연회색 */
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.thumbnail input[type="text"] {
+  width: 80%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
 }
