@@ -46,4 +46,50 @@ function arrangeThumbnails() {
     thumbnailsContainer.appendChild(thumbnailDiv);
   }
 }
+// index.js
+window.onload = function() {
+  const mainContent = document.getElementById('mainContent');
+
+  const data = [
+    {
+      profileImage: 'uploader1_profile.jpg',
+      uploaderID: "Uploader 1's ID",
+      thumbnails: ['uploader1_thumbnail1.jpg', 'uploader1_thumbnail2.jpg']
+    },
+    {
+      profileImage: 'uploader2_profile.jpg',
+      uploaderID: "Uploader 2's ID",
+      thumbnails: ['uploader2_thumbnail1.jpg', 'uploader2_thumbnail2.jpg']
+    },
+    // 추가적인 업로더 정보
+  ];
+
+  data.forEach(uploader => {
+    const uploaderDiv = document.createElement('div');
+    uploaderDiv.classList.add('uploader');
+
+    const profileImg = document.createElement('img');
+    profileImg.src = uploader.profileImage;
+    profileImg.alt = `${uploader.uploaderID}'s Profile`;
+    profileImg.classList.add('profile-picture');
+
+    const uploaderID = document.createElement('h2');
+    uploaderID.textContent = uploader.uploaderID;
+
+    const thumbnailsContainer = document.createElement('div');
+    thumbnailsContainer.classList.add('thumbnails-container');
+
+    uploader.thumbnails.forEach(thumbnail => {
+      const thumbnailImg = document.createElement('img');
+      thumbnailImg.src = thumbnail;
+      thumbnailImg.alt = `${uploader.uploaderID}'s Video Thumbnail`;
+      thumbnailsContainer.appendChild(thumbnailImg);
+    });
+
+    uploaderDiv.appendChild(profileImg);
+    uploaderDiv.appendChild(uploaderID);
+    uploaderDiv.appendChild(thumbnailsContainer);
+    mainContent.appendChild(uploaderDiv);
+  });
+};
 
