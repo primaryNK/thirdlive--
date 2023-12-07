@@ -30,15 +30,25 @@ footer {
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #000; /* 검은색 */
+  background-color: #333; /* 회색 */
 }
 
-#uploadButton {
-  background-color: #fff; /* 하얀색 */
-  color: #0000ff; /* 파랑 */
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+/* styles.css */
+
+/* Upload Button */
+.upload-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff; /* 배경색 (여기서는 하얀색을 사용하였습니다) */
+  border-radius: 50%; /* 동그란 모양으로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue; /* 텍스트 색상 */
+  font-size: 24px; /* 아이콘 사이즈 설정 */
   cursor: pointer;
 }
 
