@@ -32,6 +32,7 @@ header {
   font-size: 50px;
   color: black;
   padding: 5px 10px;
+  border: None;
 }
 
 #menuButton{
@@ -40,6 +41,7 @@ header {
   font-size: 50px;
   color: white;
   padding: 5px 10px;
+  border: none;
 }
 
 #menu {
@@ -58,6 +60,7 @@ header {
 }
 #menu.close {
   width: 0%;
+}
 
 /* Footer */
 footer {
