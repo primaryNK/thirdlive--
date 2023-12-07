@@ -70,17 +70,18 @@ function arrangeThumbnails() {
   });
 }
 
-const uploadButton = document.getElementById('uploadButton');
-uploadButton.addEventListener('click', function() {
-  // 업로드 버튼이 클릭되었을 때 실행할 동작을 여기에 작성합니다.
-  window.location.href = 'upload.html'; // 업로드 페이지로 이동
-});
-
-arrangeThumbnails(); // 썸네일 배치 함수 호출
-
 const menuButton = document.getElementById('menuButton');
 const menu = document.getElementById('menu');
 
 menuButton.addEventListener('click', function() {
   menu.classList.toggle('open');
 });
+
+const uploadButton = document.getElementById('uploadButton');
+
+uploadButton.addEventListener('click', function() {
+  // 업로드 버튼이 클릭되었을 때 실행할 동작을 여기에 작성합니다.
+  window.location.href = 'upload.html'; // 업로드 페이지로 이동
+});
+
+arrangeThumbnails(); // 썸네일 배치 함수 호출
