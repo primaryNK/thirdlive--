@@ -15,48 +15,12 @@
     </div>
   </header>
   
-  <main id="thumbnailsContainer">
-    <!-- 동적으로 생성될 썸네일과 제목 -->
+  <main id="mainContent">
+    <!-- 동적으로 생성될 콘텐츠 영역 -->
   </main>
 
-  <footer>
-    <button id="uploadButton">+</button>
-  </footer>
+  <!-- 추가적인 콘텐츠 및 푸터 -->
 
   <script src="index.js"></script>
-  <script>
-    // 동적으로 제목 가져오는 예시 (실제로는 데이터베이스와 연동하여 처리해야 함)
-    const titles = ['Video Title 1', 'Video Title 2', 'Video Title 3', 'Video Title 4', 'Video Title 5'];
-
-    window.onload = function() {
-      arrangeThumbnails();
-    };
-
-    function arrangeThumbnails() {
-      const thumbnailsContainer = document.getElementById('thumbnailsContainer');
-      thumbnailsContainer.innerHTML = '';
-
-      const mainWidth = window.innerWidth;
-      const thumbnailWidth = mainWidth > 768 ? mainWidth / 2 : mainWidth;
-
-      for (let i = 0; i < titles.length; i++) {
-        const thumbnailDiv = document.createElement('div');
-        thumbnailDiv.classList.add('thumbnail');
-        thumbnailDiv.style.width = `${thumbnailWidth}px`;
-
-        // 썸네일 이미지 추가
-        // ...
-
-        // 썸네일 제목 추가
-        const thumbnailTitle = document.createElement('input');
-        thumbnailTitle.setAttribute('type', 'text');
-        thumbnailTitle.setAttribute('placeholder', 'Enter Thumbnail Title');
-        thumbnailTitle.value = titles[i]; // 데이터베이스에서 가져온 제목
-        thumbnailDiv.appendChild(thumbnailTitle);
-
-        thumbnailsContainer.appendChild(thumbnailDiv);
-      }
-    }
-  </script>
 </body>
 </html>
