@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>유튜브 스타일의 썸네일 페이지</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Simple YouTube Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <input type="text" placeholder="검색창">
-    </div>
+  <header>
+    <h1>My YouTube Channel</h1>
+    <input type="text" placeholder="Search...">
+    <button>Search</button>
+  </header>
+  
+  <main>
+    <section class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      <h2>Video Title</h2>
+      <p>Description of the video...</p>
+    </section>
+    
+    <section class="video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      <h2>Another Video Title</h2>
+      <p>Description of another video...</p>
+    </section>
+  </main>
 
-    <div class= "menu-bar">
-        <button id="menuButton">
-            =
-        </button> 
-    </div>
-    <div class="menu-slider" id="menuSlider">
-        <ul>
-            <li>메뉴 항목 1</li>
-            <li>메뉴 항목 2</li>
-            <li>메뉴 항목 3</li>
-            <!-- 필요한 만큼의 메뉴 항목 추가 -->
-        </ul>
-    </div>
-
-    <div class="thumbnails">
-        <div class="thumbnail longer-thumbnail">
-            <!-- 이미지가 더 긴 썸네일 -->
-        </div>
-        <div class="thumbnail">
-            <!-- 다른 썸네일들 -->
-        </div>
-        <!-- 필요한 만큼의 썸네일 추가 -->
-    </div>
-
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2023 My YouTube Channel</p>
+  </footer>
 </body>
 </html>
