@@ -1,5 +1,8 @@
+// index.js
+
+// 업로드 버튼 클릭 시 영상 업로드 페이지로 이동
 document.getElementById('uploadButton').addEventListener('click', function() {
-  window.location.href = 'upload.html'; // 영상 업로드 페이지로 이동
+  window.location.href = 'upload.html';
 });
 
 // 화면 로드 시, 썸네일 및 제목 동적 배치
@@ -34,10 +37,9 @@ function arrangeThumbnails() {
     // 썸네일 이미지 추가
     thumbnailDiv.appendChild(thumbnailImage);
 
-    // 썸네일 제목 추가 (입력 필드 등)
-    const thumbnailTitle = document.createElement('input');
-    thumbnailTitle.setAttribute('type', 'text');
-    thumbnailTitle.setAttribute('placeholder', 'Enter Thumbnail Title');
+    // 썸네일 제목 추가 (데이터베이스에서 가져온 제목)
+    const thumbnailTitle = document.createElement('h3');
+    thumbnailTitle.textContent = "Thumbnail Title"; // 여기에 데이터베이스에서 가져온 제목을 입력
 
     // 썸네일 제목 추가
     thumbnailDiv.appendChild(thumbnailTitle);
@@ -46,7 +48,7 @@ function arrangeThumbnails() {
     thumbnailsContainer.appendChild(thumbnailDiv);
   }
 }
-// index.js
+
 window.onload = function() {
   const mainContent = document.getElementById('mainContent');
 
@@ -54,12 +56,18 @@ window.onload = function() {
     {
       profileImage: 'uploader1_profile.jpg',
       uploaderID: "Uploader 1's ID",
-      thumbnails: ['uploader1_thumbnail1.jpg', 'uploader1_thumbnail2.jpg']
+      thumbnails: [
+        { thumbnailSrc: 'uploader1_thumbnail1.jpg', thumbnailTitle: 'Uploader 1 Thumbnail 1' },
+        { thumbnailSrc: 'uploader1_thumbnail2.jpg', thumbnailTitle: 'Uploader 1 Thumbnail 2' }
+      ]
     },
     {
       profileImage: 'uploader2_profile.jpg',
       uploaderID: "Uploader 2's ID",
-      thumbnails: ['uploader2_thumbnail1.jpg', 'uploader2_thumbnail2.jpg']
+      thumbnails: [
+        { thumbnailSrc: 'uploader2_thumbnail1.jpg', thumbnailTitle: 'Uploader 2 Thumbnail 1' },
+        { thumbnailSrc: 'uploader2_thumbnail2.jpg', thumbnailTitle: 'Uploader 2 Thumbnail 2' }
+      ]
     },
     // 추가적인 업로더 정보
   ];
@@ -80,10 +88,19 @@ window.onload = function() {
     thumbnailsContainer.classList.add('thumbnails-container');
 
     uploader.thumbnails.forEach(thumbnail => {
+      const thumbnailDiv = document.createElement('div');
+      thumbnailDiv.classList.add('thumbnail');
+
       const thumbnailImg = document.createElement('img');
-      thumbnailImg.src = thumbnail;
+      thumbnailImg.src = thumbnail.thumbnailSrc;
       thumbnailImg.alt = `${uploader.uploaderID}'s Video Thumbnail`;
-      thumbnailsContainer.appendChild(thumbnailImg);
+
+      const thumbnailTitle = document.createElement('h3');
+      thumbnailTitle.textContent = thumbnail.thumbnailTitle;
+
+      thumbnailDiv.appendChild(thumbnailImg);
+      thumbnailDiv.appendChild(thumbnailTitle);
+      thumbnailsContainer.appendChild(thumbnailDiv);
     });
 
     uploaderDiv.appendChild(profileImg);
@@ -92,4 +109,3 @@ window.onload = function() {
     mainContent.appendChild(uploaderDiv);
   });
 };
-
