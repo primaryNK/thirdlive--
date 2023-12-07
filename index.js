@@ -80,10 +80,10 @@ menuButton.addEventListener('click', function() {
   menuButton2.classList.toggle('show');
   if (menuButton2.classList.contains('hidden')) {
     menuButton2.disabled = true; // 버튼 비활성화
-    if (menuButton2.classList.contains('show')) {
+  };
+  if (menuButton2.classList.contains('show')) {
       menuButton2.disabled = false; // 버튼 다시 활성화
     }; 
-  }
 });
 
 menuButton2.addEventListener('click', function() {
@@ -92,10 +92,10 @@ menuButton2.addEventListener('click', function() {
   menuButton.classList.toggle('show');
   if (menuButton.classList.contains('hidden')) {
     menuButton.disabled = true; // 버튼 비활성화
+  };
     if (menuButton.classList.contains('show')) {
       menuButton.disabled = false; // 버튼 다시 활성화
     };   
-  }
 });
 
 const uploadButton = document.getElementById('uploadButton');
