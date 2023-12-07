@@ -11,8 +11,10 @@ header {
 
 .logo h1 {
   margin: 0;
+  left: 100px;
   padding: 5px 10px;
   font-size: 60px;
+  color: white;
 }
 
 .login-button a {
