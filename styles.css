@@ -26,6 +26,14 @@ header {
   border-radius: 20px; 
 }
 
+#menuButton2{
+  background: None;
+  left: 20px;
+  font-size: 50px;
+  color: black;
+  padding: 5px 10px;
+}
+
 #menuButton{
   background: None;
   left: 20px;
@@ -48,6 +56,8 @@ header {
 #menu.open {
   width: 50%; /* 슬라이드되는 메뉴의 너비 조정 */
 }
+#menu.close {
+  width: 0%;
 
 /* Footer */
 footer {
