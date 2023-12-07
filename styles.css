@@ -1,7 +1,8 @@
 /* Reset some default styles */
-body, h1, h2, p, input, button {
+body, h1, h2, p, input, button, img {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic styling for the layout */
@@ -9,6 +10,23 @@ header {
   background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
+}
+
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 16px;
 }
 
 main {
@@ -20,18 +38,25 @@ main {
 }
 
 .video {
-  width: 500px;
+  width: 300px;
   background-color: #f9f9f9;
   padding: 20px;
   text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
 }
 
-iframe {
+.video:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+img {
   width: 100%;
-  height: 300px;
+  height: auto;
   margin-bottom: 10px;
 }
-  
+
 footer {
   text-align: center;
   padding: 10px;
