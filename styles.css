@@ -7,15 +7,24 @@ body, h1, h2, p, input, button, img {
 
 /* Basic styling for the layout */
 header {
-  background-color: #f1f1f1;
-  padding: 20px;
   text-align: center;
+}
+
+.banner {
+  background: linear-gradient(45deg, #FF6EFF, #FFFF99);
+  padding: 20px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 28px;
 }
 
 .search-bar {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 10px;
+  text-align: center;
 }
 
 input[type="text"] {
@@ -35,6 +44,7 @@ main {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  text-align: center;
 }
 
 .video {
