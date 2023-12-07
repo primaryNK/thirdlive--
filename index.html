@@ -2,37 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple YouTube Page</title>
+  <title>Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="banner">
-      <h1>My YouTube Channel</h1>
+    <div class="logo">
+      <h1>My Website</h1>
     </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
-      <button>Search</button>
+    <div class="login-button">
       <a href="login.html">Login</a>
     </div>
   </header>
   
-  <main>
-    <a href="video_page.html" class="video">
-      <img src="thumbnail1.jpg" alt="Thumbnail 1">
-      <h2>Video Title 1</h2>
-    </a>
-    
-    <a href="video_page.html" class="video">
-      <img src="thumbnail2.jpg" alt="Thumbnail 2">
-      <h2>Video Title 2</h2>
-    </a>
+  <main id="thumbnailsContainer">
+    <!-- 썸네일과 제목이 동적으로 들어갈 공간 -->
   </main>
 
-  <footer>
-    <p>&copy; 2023 My YouTube Channel</p>
+  <footer id="uploadFooter">
     <button id="uploadButton">+</button>
   </footer>
-<script src="index.js"></script>
+
+  <script src="index.js"></script>
 </body>
 </html>
