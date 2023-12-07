@@ -31,6 +31,16 @@ body {
     color: white;
 }
 
+/* Menu Bar */
+.menu-bar {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+}
+
 /* Menu Slider */
 .menu-slider {
     background-color: #ddd;
