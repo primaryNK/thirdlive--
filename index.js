@@ -5,7 +5,7 @@ function arrangeThumbnails() {
   thumbnailsContainer.innerHTML = ''; // 기존 콘텐츠 초기화
 
   const mainWidth = window.innerWidth;
-  const thumbnailWidth = mainWidth > 768 ? mainWidth / 2 : mainWidth;
+  const thumbnailWidth = mainWidth > 768 ? mainWidth / 4 : mainWidth / 2; // 트위치 썸네일 비율
 
   const uploaderData = [
     // 예시 데이터
@@ -35,6 +35,9 @@ function arrangeThumbnails() {
     const thumbnailsWrapper = document.createElement('div');
     thumbnailsWrapper.classList.add('thumbnails-wrapper');
 
+    const thumbnailRow = document.createElement('div');
+    thumbnailRow.classList.add('thumbnail-row');
+
     uploader.thumbnails.forEach(thumbnail => {
       const thumbnailBox = document.createElement('div');
       thumbnailBox.classList.add('thumbnail-box');
@@ -46,14 +49,10 @@ function arrangeThumbnails() {
 
       profileThumbnail.onload = function() {
         const aspectRatio = this.width / this.height;
+        const calculatedHeight = thumbnailWidth / aspectRatio;
 
-        if (this.width > this.height) {
-          this.style.width = '100%';
-          this.style.height = 'auto';
-        } else {
-          this.style.width = 'auto';
-          this.style.height = '100%';
-        }
+        this.style.width = `${thumbnailWidth}px`;
+        this.style.height = `${calculatedHeight}px`;
       };
 
       const thumbnailTitle = document.createElement('h3');
@@ -62,9 +61,10 @@ function arrangeThumbnails() {
 
       thumbnailBox.appendChild(profileThumbnail);
       thumbnailBox.appendChild(thumbnailTitle);
-      thumbnailsWrapper.appendChild(thumbnailBox);
+      thumbnailRow.appendChild(thumbnailBox);
     });
 
+    thumbnailsWrapper.appendChild(thumbnailRow);
     uploaderDiv.appendChild(profileImg);
     uploaderDiv.appendChild(uploaderID);
     uploaderDiv.appendChild(thumbnailsWrapper);
