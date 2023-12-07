@@ -1,7 +1,5 @@
 /* styles.css */
 
-/* styles.css */
-
 /* Header */
 header {
   display: flex;
@@ -30,25 +28,24 @@ footer {
   left: 0;
   width: 100%;
   padding: 20px;
-  background-color: #333; /* 회색 */
+  background-color: #333;
 }
 
-.upload-button {
+#uploadButton {
   position: fixed;
   bottom: 20px;
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #4285F4; /* 배경색 (여기서는 파란색을 사용하였습니다) */
-  border-radius: 50%; /* 동그란 모양으로 설정 */
+  background-color: #4285F4;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; /* 텍스트 색상 */
-  font-size: 24px; /* 아이콘 사이즈 설정 */
+  color: white;
+  font-size: 24px;
   cursor: pointer;
 }
-
 
 /* Thumbnail Container */
 #thumbnailsContainer {
@@ -61,7 +58,8 @@ footer {
 }
 
 .thumbnail {
-  background-color: #ccc; /* 연회색 */
+  width: 200px; /* 수정 가능한 사이즈 */
+  background-color: #ccc;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -69,7 +67,8 @@ footer {
 
 .thumbnail img {
   width: 100%;
-  height: auto;
+  height: 120px; /* 수정 가능한 사이즈 */
+  object-fit: cover;
   border-radius: 5px;
   margin-bottom: 10px;
 }
