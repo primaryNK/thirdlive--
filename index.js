@@ -1,21 +1,5 @@
 // index.js
 
-// 업로드 버튼 클릭 시 영상 업로드 페이지로 이동
-document.getElementById('uploadButton').addEventListener('click', function() {
-  window.location.href = 'upload.html';
-});
-
-// 화면 로드 시, 썸네일 및 제목 동적 배치
-window.onload = function() {
-  arrangeThumbnails();
-};
-
-// 화면 크기 조절 시, 썸네일 및 제목 동적 배치
-window.onresize = function() {
-  arrangeThumbnails();
-};
-
-// 썸네일과 제목 동적 배치 함수
 function arrangeThumbnails() {
   const thumbnailsContainer = document.getElementById('thumbnailsContainer');
   thumbnailsContainer.innerHTML = ''; // 기존 콘텐츠 초기화
@@ -23,36 +7,8 @@ function arrangeThumbnails() {
   const mainWidth = window.innerWidth;
   const thumbnailWidth = mainWidth > 768 ? mainWidth / 2 : mainWidth;
 
-  const numberOfThumbnails = 5; // 썸네일 개수
-
-  for (let i = 0; i < numberOfThumbnails; i++) {
-    const thumbnailDiv = document.createElement('div');
-    thumbnailDiv.classList.add('thumbnail');
-    thumbnailDiv.style.width = `${thumbnailWidth}px`;
-
-    // 실제 썸네일 이미지는 여기에 추가하거나 생성할 수 있습니다.
-    const thumbnailImage = document.createElement('img');
-    thumbnailImage.src = 'img (4).jpg'; // 썸네일 이미지 경로
-
-    // 썸네일 이미지 추가
-    thumbnailDiv.appendChild(thumbnailImage);
-
-    // 썸네일 제목 추가 (데이터베이스에서 가져온 제목)
-    const thumbnailTitle = document.createElement('h3');
-    thumbnailTitle.textContent = "Thumbnail Title"; // 여기에 데이터베이스에서 가져온 제목을 입력
-
-    // 썸네일 제목 추가
-    thumbnailDiv.appendChild(thumbnailTitle);
-
-    // 썸네일 컨테이너에 추가
-    thumbnailsContainer.appendChild(thumbnailDiv);
-  }
-}
-
-window.onload = function() {
-  const mainContent = document.getElementById('mainContent');
-
-  const data = [
+  const uploaderData = [
+    // 예시 데이터
     {
       profileImage: 'uploader1_profile.jpg',
       uploaderID: "Uploader 1's ID",
@@ -61,18 +17,10 @@ window.onload = function() {
         { thumbnailSrc: 'uploader1_thumbnail2.jpg', thumbnailTitle: 'Uploader 1 Thumbnail 2' }
       ]
     },
-    {
-      profileImage: 'uploader2_profile.jpg',
-      uploaderID: "Uploader 2's ID",
-      thumbnails: [
-        { thumbnailSrc: 'uploader2_thumbnail1.jpg', thumbnailTitle: 'Uploader 2 Thumbnail 1' },
-        { thumbnailSrc: 'uploader2_thumbnail2.jpg', thumbnailTitle: 'Uploader 2 Thumbnail 2' }
-      ]
-    },
     // 추가적인 업로더 정보
   ];
 
-  data.forEach(uploader => {
+  uploaderData.forEach(uploader => {
     const uploaderDiv = document.createElement('div');
     uploaderDiv.classList.add('uploader');
 
@@ -84,28 +32,42 @@ window.onload = function() {
     const uploaderID = document.createElement('h2');
     uploaderID.textContent = uploader.uploaderID;
 
-    const thumbnailsContainer = document.createElement('div');
-    thumbnailsContainer.classList.add('thumbnails-container');
+    const thumbnailsWrapper = document.createElement('div');
+    thumbnailsWrapper.classList.add('thumbnails-wrapper');
 
     uploader.thumbnails.forEach(thumbnail => {
-      const thumbnailDiv = document.createElement('div');
-      thumbnailDiv.classList.add('thumbnail');
+      const thumbnailBox = document.createElement('div');
+      thumbnailBox.classList.add('thumbnail-box');
 
-      const thumbnailImg = document.createElement('img');
-      thumbnailImg.src = thumbnail.thumbnailSrc;
-      thumbnailImg.alt = `${uploader.uploaderID}'s Video Thumbnail`;
+      const profileThumbnail = new Image();
+      profileThumbnail.src = thumbnail.thumbnailSrc;
+      profileThumbnail.alt = `${uploader.uploaderID}'s Video Thumbnail`;
+      profileThumbnail.classList.add('thumbnail-image');
+
+      profileThumbnail.onload = function() {
+        const aspectRatio = this.width / this.height;
+
+        if (this.width > this.height) {
+          this.style.width = '100%';
+          this.style.height = 'auto';
+        } else {
+          this.style.width = 'auto';
+          this.style.height = '100%';
+        }
+      };
 
       const thumbnailTitle = document.createElement('h3');
       thumbnailTitle.textContent = thumbnail.thumbnailTitle;
+      thumbnailTitle.classList.add('thumbnail-title');
 
-      thumbnailDiv.appendChild(thumbnailImg);
-      thumbnailDiv.appendChild(thumbnailTitle);
-      thumbnailsContainer.appendChild(thumbnailDiv);
+      thumbnailBox.appendChild(profileThumbnail);
+      thumbnailBox.appendChild(thumbnailTitle);
+      thumbnailsWrapper.appendChild(thumbnailBox);
     });
 
     uploaderDiv.appendChild(profileImg);
     uploaderDiv.appendChild(uploaderID);
-    uploaderDiv.appendChild(thumbnailsContainer);
-    mainContent.appendChild(uploaderDiv);
+    uploaderDiv.appendChild(thumbnailsWrapper);
+    thumbnailsContainer.appendChild(uploaderDiv);
   });
-};
+}
