@@ -11,10 +11,13 @@ header {
 
 .logo h1 {
   margin: 0;
+  padding: 5px 10px;
+  font-size: 100px;
 }
 
 .login-button a {
   text-decoration: none;
+  font-size: 100px;
   color: #000;
   border: 2px solid #000;
   padding: 5px 10px;
@@ -63,7 +66,6 @@ footer {
   background-color: #ccc;
   border-radius: 10px;
   padding: 10px;
-  text-align: center;
 }
 
 .thumbnail img {
