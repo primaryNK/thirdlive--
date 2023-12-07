@@ -75,14 +75,14 @@ const menu = document.getElementById('menu');
 
 menuButton.addEventListener('click', function() {
   menu.classList.toggle('open');
-  menuButton.classList.toggle('hidden')
+  menuButton.classList.toggle('hidden');
 });
 
 const menuButton2 = document.getElementById('menuButton2');
 
 menuButton2.addEventListener('click', function() {
   menu.classList.toggle('close');
-  menuButton2.classList.toggle('hidden')
+  menuButton2.classList.toggle('hidden');
 });
 
 const uploadButton = document.getElementById('uploadButton');
