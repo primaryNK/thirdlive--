@@ -67,47 +67,25 @@ img {
   margin-bottom: 10px;
 }
 
+/* 기존 스타일 */
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 
-/* 버튼 스타일 */
 #uploadButton {
   width: 40px;
   height: 40px;
-  border-radius: 50%; /* 동그란 모양을 위한 속성 */
+  border-radius: 50%;
   background-color: #333;
   color: white;
   font-size: 24px;
   border: none;
   cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #uploadButton:hover {
-  background-color: #555;
-}
-
-/* login */
-.logo h1 {
-  margin: 0;
-}
-
-.login-button {
-  margin-right: 20px;
-}
-
-.login-button a {
-  padding: 8px 12px;
-  background-color: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.login-button a:hover {
   background-color: #555;
 }
