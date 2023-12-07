@@ -79,7 +79,6 @@ menuButton.addEventListener('click', function() {
 });
 
 const menuButton2 = document.getElementById('menuButton2');
-const menu = document.getElementById('menu');
 
 menuButton2.addEventListener('click', function() {
   menu.classList.toggle('close');
