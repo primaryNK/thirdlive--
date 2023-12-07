@@ -1,73 +1,62 @@
-/* Reset some default styles */
-body, h1, h2, p, input, button, img {
+/* styles.css */
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: white; /* 배경색 추가 */
 }
 
-/* Basic styling for the layout */
 header {
-  text-align: center;
-}
-
-.banner {
   background: linear-gradient(45deg, #FF6EFF, #FFFF99);
   padding: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.banner h1 {
+.logo h1 {
+  margin: 0;
+}
+
+.login-button a {
+  background-color: #333;
   color: white;
-  font-size: 28px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 
-.search-bar {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 10px;
-  text-align: center;
-}
-
-input[type="text"] {
-  width: 80%;
-  padding: 8px;
-  font-size: 16px;
-}
-
-button {
-  padding: 8px 15px;
-  font-size: 16px;
+.login-button a:hover {
+  background-color: #555;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
   padding: 20px;
-  text-align: center;
 }
 
-.video {
-  width: 300px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  text-align: center;
+.thumbnail {
   margin: 10px;
-  text-decoration: none;
-  color: #333;
+  padding: 20px;
+  border: 2px dashed #FF6EFF;
+  border-radius: 10px;
+  width: calc(50% - 20px); /* 동적 썸네일 크기 설정 */
+  background-color: #FF6EFF; /* 연분홍 배경 추가 */
 }
 
-.video:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+.thumbnail input[type="text"] {
+  width: calc(100% - 40px);
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #FFFF99; /* 노랑 배경 추가 */
 }
 
-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-/* 기존 스타일 */
 footer {
   position: fixed;
   bottom: 20px;
