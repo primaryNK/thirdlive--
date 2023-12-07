@@ -6,7 +6,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(45deg, #FF6EFF, #FFFF99);
-  padding: 15px;
+  padding: 50px;
 }
 
 .logo h1 {
@@ -16,9 +16,9 @@ header {
 .login-button a {
   text-decoration: none;
   color: #000;
-  border: 1px solid #000;
+  border: 2px solid #000;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 /* Footer */
@@ -35,15 +35,16 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-color: #ff;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: blue;
-  font-size: 24px;
+  font-size: 100px;
+  font-bold: true;
   cursor: pointer;
 }
 
