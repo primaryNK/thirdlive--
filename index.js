@@ -71,6 +71,11 @@ function arrangeThumbnails() {
     thumbnailsContainer.appendChild(uploaderDiv);
   });
 }
-document.querySelector('.upload-button').addEventListener('click', function() {
-  window.location.href = 'upload.html'; // 업로드 페이지로 이동
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.upload-button').addEventListener('click', function() {
+    window.location.href = 'upload.html'; // 업로드 페이지로 이동
+  });
+
+  arrangeThumbnails(); // 썸네일 배치 함수 호출
 });
