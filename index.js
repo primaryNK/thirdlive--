@@ -80,8 +80,3 @@ document.addEventListener('DOMContentLoaded', function() {
   arrangeThumbnails(); // 썸네일 배치 함수 호출
 });
 
-// index.js
-
-document.getElementById('uploadButton').addEventListener('click', function() {
-  window.location.href = 'upload.html'; // 업로드 페이지로 이동
-});
