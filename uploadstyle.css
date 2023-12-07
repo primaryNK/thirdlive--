@@ -19,6 +19,14 @@ header {
   cursor: pointer;
 }
 
+#logo {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 main {
   display: flex;
   flex-direction: column;
