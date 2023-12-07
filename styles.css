@@ -7,10 +7,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(45deg, #FF6EFF, #FFFF99);
   padding: 20px;
-  background: linear-gradient(to right, #f6d6e1, #fcc6ff); /* 그라데이션 적용 */
 }
-
 
 .logo h1 {
   margin: 0;
