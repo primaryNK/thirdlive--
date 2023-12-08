@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload</title>
+  <link rel="stylesheet" href="uploadstyle.css">
+</head>
+<body>
+  <header>
+    <button id="goBackButton">&#8592;</button>
+    <button id="logo">ThirdLive</button>
+  </header>
+
+  <main>
+    <div class="upload-area">
+      <h2>Upload Thumbnail Image</h2>
+      <input type="file" accept="image/*" id="thumbnailUpload">
+    </div>
+    
+    <div class="upload-area">
+      <h2>Upload Video</h2>
+      <input type="file" accept="video/*" id="videoUpload">
+    </div>
+
+    <input type="text" placeholder="Enter Video Title" id="videoTitle">
+  </main>
+
+  <script src="upload.js"></script>
+</body>
+</html>
