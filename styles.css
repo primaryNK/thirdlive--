@@ -5,7 +5,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(45deg, blue, darkblue);
+  background: linear-gradient(45deg, darkblue, blue);
   padding: 30px;
 }
 
