@@ -74,28 +74,21 @@ const menuButton = document.getElementById('menuButton');
 const menuButton2 = document.getElementById('menuButton2');
 const menu = document.getElementById('menu');
 
+
 menuButton.addEventListener('click', function() {
   menu.classList.toggle('open');
+  menu.classList.remove('close');
   menuButton.classList.toggle('hidden');
   menuButton2.classList.toggle('show');
-  if (menuButton2.classList.contains('hidden')) {
-    menuButton2.disabled = true; // 버튼 비활성화
-  };
-  if (menuButton2.classList.contains('show')) {
-      menuButton2.disabled = false; // 버튼 다시 활성화
-    }; 
+  menuButton2.classList.remove('hidden');
 });
 
 menuButton2.addEventListener('click', function() {
   menu.classList.toggle('close');
+  menu.classList.remove('open');
   menuButton2.classList.toggle('hidden');
   menuButton.classList.toggle('show');
-  if (menuButton.classList.contains('hidden')) {
-    menuButton.disabled = true; // 버튼 비활성화
-  };
-    if (menuButton.classList.contains('show')) {
-      menuButton.disabled = false; // 버튼 다시 활성화
-    };   
+  menuButton.classList.remove('hidden');
 });
 
 const uploadButton = document.getElementById('uploadButton');
