@@ -103,7 +103,7 @@ footer {
   align-items: center;
   color: blue;
   font-size: 150px;
-  font-bold: true;
+  font-style: bold;
   cursor: pointer;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur-radius, 색상 */
 }
