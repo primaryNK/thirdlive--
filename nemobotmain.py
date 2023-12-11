@@ -1,3 +1,4 @@
+import os
 import asyncio
 import discord
 from discord.ui import Button, View
@@ -22,7 +23,8 @@ from datetime import datetime
 intents = discord.Intents.all()
 intents.guilds = True
 client = discord.Client
-openxl = openpyxl.load_workbook("nemobot.xlsx")
+xlsxPath = os.path.expanduser("nemobot.xlsx")
+openxl = openpyxl.load_workbook(filename=xlsxPath, read_only=True)
 bot = commands.Bot(command_prefix='!',intents=intents)
 dt = datetime.now()
 global preset
