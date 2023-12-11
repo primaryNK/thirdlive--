@@ -24,7 +24,7 @@ intents = discord.Intents.all()
 intents.guilds = True
 client = discord.Client
 xlsxPath = os.path.expanduser("nemobot.xlsx")
-openxl = openpyxl.load_workbook(filename=xlsxPath, read_only=True)
+openxl = openpyxl.load_workbook(filename=xlsxPath)
 bot = commands.Bot(command_prefix='!',intents=intents)
 dt = datetime.now()
 global preset
