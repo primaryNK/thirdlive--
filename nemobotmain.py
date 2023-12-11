@@ -22,7 +22,7 @@ from datetime import datetime
 intents = discord.Intents.all()
 intents.guilds = True
 client = discord.Client
-openxl = openpyxl.load_workbook("/storage/emulated/0/Documents/Pydroid3/nemobot.xlsx")
+openxl = openpyxl.load_workbook("nemobot.xlsx")
 bot = commands.Bot(command_prefix='!',intents=intents)
 dt = datetime.now()
 global preset
