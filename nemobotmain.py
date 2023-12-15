@@ -493,4 +493,4 @@ async def on_member_update(before, after):
         pass   
 
 
-bot.run("MTE3MDY5MDg5MTk3NjAyNDA5NA.G-YeAh.meyfKhDlJyplFWXVKl6mGeaO4vM6niSh4c0RU4")
+bot.run("")
