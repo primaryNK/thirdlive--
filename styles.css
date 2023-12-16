@@ -89,27 +89,33 @@ footer {
   padding: 50px;
   background-color: #333;
 }
-
-#uploadButton {
+.footer {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 150px;
-  height: 150px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: blue;
-  font-size: 150px;
-  font-bold: true;
-  cursor: pointer;
-  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur-radius, 색상 */
+  text-align: right;
+  /* 다른 스타일링을 위한 여백 지정 */
+  padding: 20px;
 }
 
-.centered-image {
-    margin: 0 auto;
+.button-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px; /* 버튼과 이미지 간 여백 조절을 위한 값 */
+}
+
+#uploadButton {
+  /* 버튼 스타일링 */
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#imageUpload {
+  /* 이미지 스타일링 */
+  width: 100px; /* 이미지 너비 조정 */
 }
 
 /* Thumbnail Container */
