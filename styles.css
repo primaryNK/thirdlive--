@@ -97,7 +97,7 @@ footer {
 }
 
 .button-container {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   margin-bottom: 20px; /* 버튼과 이미지 간 여백 조절을 위한 값 */
@@ -113,7 +113,7 @@ footer {
   cursor: pointer;
 }
 
-#imageUpload {
+.imageUpload {
   /* 이미지 스타일링 */
   width: 100px; /* 이미지 너비 조정 */
 }
