@@ -92,21 +92,7 @@ footer {
 
 #uploadButton {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 150px;
-  height: 150px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: blue;
-  font-size: 150px;
-  font-bold: true;
-  cursor: pointer;
-  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3); /* x-offset, y-offset, blur-radius, 색상 */
-}
+  
 
 /* Thumbnail Container */
 #thumbnailsContainer {
