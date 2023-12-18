@@ -105,7 +105,6 @@ footer {
 
 #uploadButton {
   /* 버튼 스타일링 */
-  display: None;
   border: none;
   cursor: pointer;
 }
