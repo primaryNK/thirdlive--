@@ -100,7 +100,7 @@ footer {
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-bottom: 20px; /* 버튼과 이미지 간 여백 조절을 위한 값 */
+  margin-bottom: None; /* 버튼과 이미지 간 여백 조절을 위한 값 */
 }
 
 #uploadButton {
