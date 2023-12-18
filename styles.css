@@ -115,6 +115,7 @@ footer {
 
 .imageUpload {
   /* 이미지 스타일링 */
+  position: relative;
   width: 100px; /* 이미지 너비 조정 */
 }
 
