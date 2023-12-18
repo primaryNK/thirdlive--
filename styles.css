@@ -105,11 +105,8 @@ footer {
 
 #uploadButton {
   /* 버튼 스타일링 */
-  padding: 10px 20px;
-  background-color: #337ab7;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
